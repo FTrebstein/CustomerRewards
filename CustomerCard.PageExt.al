@@ -42,7 +42,7 @@ pageextension 50100 "Customer Card" extends "Customer Card"
                     ItemCSVExport: Codeunit "Item CSV Export";
                 begin
                     ItemCSVExport.ExportItems();
-
+                    // Test für Brancherstellung
                 end;
             }
         }
