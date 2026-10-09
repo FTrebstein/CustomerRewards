@@ -1,0 +1,15 @@
+.alpackages/
+.vscode/.alcache/
+*.app
+*.zip
+
+
+# AL package cache
+.alpackages/
+
+# Temporary files
+*.tmp
+*.log
+
+# Generated AL app packages
+*.app
