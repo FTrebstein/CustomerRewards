@@ -1,0 +1,33 @@
+{
+  "id": "5bdde9be-558d-4a71-979f-7b02dd69fdf9",
+  "name": "CustomerRewards",
+  "publisher": "Default Publisher",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "29.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "contextSensitiveHelpUrl": "https://learn.microsoft.com/dynamics365/business-central/",
+  "runtime": "18.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
