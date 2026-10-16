@@ -1,4 +1,4 @@
-report 50105 ExampleRDLCLayout
+report 50100 ExampleRDLCLayout
 {
     Caption = 'ExampleRDLCLayout';
     UsageCategory = ReportsAndAnalysis;
@@ -21,7 +21,7 @@ report 50105 ExampleRDLCLayout
         layout(Example_RDLCLayout)
         {
             Type = RDLC;
-            LayoutFile = './src/Reports/Example_RDLCLayout.rdl';
+            LayoutFile = './src/Reports/Layouts/Example_RDLCLayout.rdl';
             Caption = 'Example_RDLCLayout';
             Summary = 'An example of an RDLC Layout.';
         }

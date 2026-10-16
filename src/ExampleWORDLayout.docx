@@ -1,0 +1,30 @@
+al-languageCopy
+report 50100 ExampleWORDLayout
+{
+    Caption = 'ExampleWORDLayout';
+    UsageCategory = ReportsAndAnalysis;
+    ApplicationArea = All;
+    DefaultRenderingLayout = ExampleWORDLayout;
+
+    dataset
+    {
+        dataitem(Customer; Customer)
+        {
+            column(CustomerNo; "No.") { }
+            column(CustomerName; Name) { }
+            column(City; City) { }
+            column(BalanceLCY; "Balance (LCY)") { }
+        }
+    }
+
+    rendering
+    {
+        layout(ExampleWORDLayout)
+        {
+            Type = Word;
+            LayoutFile = './src/Reports/WORD/ExampleWORDLayout.docx';
+            Caption = 'ExampleWORDLayout';
+            Summary = 'An example of a WORD Layout.';
+        }
+    }
+}

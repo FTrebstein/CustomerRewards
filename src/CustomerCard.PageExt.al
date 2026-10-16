@@ -48,6 +48,11 @@ pageextension 50100 "Customer Card" extends "Customer Card"
         }
     }
 
+    trigger OnOpenPage();
+    begin
+        //report.Run(Report::LABCustomerList);
+        report.Run(Report::MyProcessingOnlyReport);
+    end;
 
     trigger OnAfterGetRecord();
     var
