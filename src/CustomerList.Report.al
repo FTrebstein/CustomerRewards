@@ -1,11 +1,13 @@
-report 50106 CustomerListReport
+report 50107 CustomerListLangRecReport
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
-    AdditionalSearchTerms = 'Customer List Report';
-    //RDLCLayout = 'CustomerListReport.rdl';
-    //DefaultLayout = RDLC;
+    Caption = 'Customer List Report Language Recipient';
+    AdditionalSearchTerms = 'Customer List Report Language Recipient';
     DefaultRenderingLayout = Example_RDLCLayout;
+    //RDLCLayout = 'CustomerListReportLangRep.rdl';
+
+    //DefaultLayout = RDLC;
 
     dataset
     {
@@ -13,37 +15,54 @@ report 50106 CustomerListReport
         {
             column(CustomerNo; "No.")
             {
-                IncludeCaption = true;
+            }
+            column(CustomerNoCptn; fieldcaption("No."))
+            {
             }
             column(CustomerName; Name)
             {
-                IncludeCaption = true;
+            }
+            column(CustomerNameCptn; fieldcaption(Name))
+            {
+            }
+            column(CustomerLanguageCode; "Language Code")
+            {
+            }
+            column(CustomerLanguageCodeCptn; fieldcaption("Language Code"))
+            {
             }
             column(City; City)
             {
-                IncludeCaption = true;
+            }
+            column(CityCptn; fieldcaption(City))
+            {
             }
             column(BalanceLCY; "Balance (LCY)")
             {
-                IncludeCaption = true;
             }
+            column(BalanceLCYCptn; fieldcaption("Balance (LCY)"))
+            {
+            }
+            trigger OnAfterGetRecord()
+            begin
+                CurrReport.Language := LanguageMgt.GetLanguageIdOrDefault("Language Code");
+            end;
+        }
+    }
+    rendering
+    {
+        layout(Example_RDLCLayout)
+        {
+            Type = RDLC;
+            LayoutFile = './src/Reports/Layouts/CustomerListCaption_RDLCLayout.rdl';
+            Caption = 'Example_CustomerListCaption_RDLCLayout';
+            Summary = 'An example of a Multi Language Report Layout with RDLC.';
         }
     }
 
+    var
+        LanguageMgt: Codeunit Language;
+        ReportTitle: Label 'Report Title', Comment = 'Foo', MaxLength = 999, Locked = true;
+}
 
 
-
-
-
-
-//     rendering
-//     {
-//         layout(Example_RDLCLayout)
-//         {
-//             Type = RDLC;
-//             LayoutFile = './src/Reports/Layouts/CustomerList_RDLCLayout.rdl';
-//             Caption = 'Example_CustomerListCaption_RDLCLayout';
-//             Summary = 'An example of a Multi Language Report Layout with RDLC.';
-//         }
-//     }
-// }

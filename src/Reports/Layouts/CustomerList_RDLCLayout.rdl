@@ -22,44 +22,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParameters>
-    <ReportParameter Name="CustomerNoCaption">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>CustomerNoCaption</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>CustomerNoCaption</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="CustomerNameCaption">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>CustomerNameCaption</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>CustomerNameCaption</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="CityCaption">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>CityCaption</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>CityCaption</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="BalanceLCYCaption">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>BalanceLCYCaption</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>BalanceLCYCaption</Prompt>
-    </ReportParameter>
-  </ReportParameters>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -105,17 +67,35 @@ End Function
         <Field Name="CustomerNo">
           <DataField>CustomerNo</DataField>
         </Field>
+        <Field Name="CustomerNoCptn">
+          <DataField>CustomerNoCptn</DataField>
+        </Field>
         <Field Name="CustomerName">
           <DataField>CustomerName</DataField>
         </Field>
+        <Field Name="CustomerNameCptn">
+          <DataField>CustomerNameCptn</DataField>
+        </Field>
+        <Field Name="CustomerLanguageCode">
+          <DataField>CustomerLanguageCode</DataField>
+        </Field>
+        <Field Name="CustomerLanguageCodeCptn">
+          <DataField>CustomerLanguageCodeCptn</DataField>
+        </Field>
         <Field Name="City">
           <DataField>City</DataField>
+        </Field>
+        <Field Name="CityCptn">
+          <DataField>CityCptn</DataField>
         </Field>
         <Field Name="BalanceLCY">
           <DataField>BalanceLCY</DataField>
         </Field>
         <Field Name="BalanceLCYFormat">
           <DataField>BalanceLCYFormat</DataField>
+        </Field>
+        <Field Name="BalanceLCYCptn">
+          <DataField>BalanceLCYCptn</DataField>
         </Field>
       </Fields>
       <Query>
